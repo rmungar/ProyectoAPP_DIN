@@ -17,6 +17,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
@@ -44,7 +45,8 @@ fun ErrorDeCampo(errores: List<Error?>, viewModel: ViewModel) {
                 Modifier
                     .fillMaxWidth()
                     .background(color = Color.White, shape = RoundedCornerShape(10.dp))
-                    .height(70.dp),
+                    .height(70.dp)
+                    .testTag("Error"),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {

@@ -80,6 +80,7 @@ fun Login(viewModel: ViewModel, paddingValues: PaddingValues, navController: Nav
             VisualTransformation.None,
             false,
             visible.value,
+            "UsernameOrEmailTextField",
             { viewModel.onUsernameOrEmailChange(it) }
         ) {}
 
@@ -97,6 +98,7 @@ fun Login(viewModel: ViewModel, paddingValues: PaddingValues, navController: Nav
             PasswordVisualTransformation(),
             true,
             visible.value,
+            "PasswordTextField",
             { viewModel.onPasswordChange(it) }
         ) {
             viewModel.onVisibleChange(it)
@@ -110,11 +112,6 @@ fun Login(viewModel: ViewModel, paddingValues: PaddingValues, navController: Nav
             else {
                 viewModel.onButtonPressed()
             }
-
         }
-
-
     }
-
-
 }

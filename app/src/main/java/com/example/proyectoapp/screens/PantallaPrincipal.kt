@@ -273,9 +273,4 @@ fun MainScreen(viewModel: ViewModel, innerPaddingValues: PaddingValues, navContr
 
 
     }
-
-
-
-
-
 }

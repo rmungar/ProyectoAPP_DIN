@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
@@ -23,6 +24,7 @@ fun CampoDeTexto(
     visualTransformation: VisualTransformation,
     trailingIcon: Boolean,
     visible: Boolean,
+    testTag: String,
     onTextoChange: (String) -> Unit,
     onVisibleChange : (Boolean) -> Unit
 ){
@@ -39,6 +41,7 @@ fun CampoDeTexto(
                 start = 5.dp,
                 end = 5.dp,
             )
+            .testTag(testTag)
         ,
         placeholder = {
             Text(
